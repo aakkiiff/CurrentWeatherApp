@@ -22,7 +22,7 @@ services:
     build: ./weather
     restart: always
     environment:
-      APIKEY: ################  Y O U R    A P I   K E Y  ##############
+      APIKEY: 5ec66691f6msh2bfa4dd1fa4b710p1580e9jsn12916c268a62
 
   ui:
     build: ./UI
