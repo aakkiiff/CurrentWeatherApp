@@ -3,7 +3,7 @@ pipeline {
     environment {
         IMAGE_TAG = "$BUILD_NUMBER"
         DOCKERHUB_USERNAME = "aakkiiff"
-        GIT_REPO = "c" 
+        GIT_REPO = "" 
 
         AUTH_APP_NAME = "auth"
         UI_APP_NAME = "ui"
