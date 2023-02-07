@@ -3,11 +3,11 @@ pipeline {
     environment {
         IMAGE_TAG = "$BUILD_NUMBER"
         DOCKERHUB_USERNAME = "aakkiiff"
-        GIT_REPO = "" 
+        GIT_REPO = "https://github.com/aakkiiff/CurrentWeatherApp/" 
 
-        AUTH_APP_NAME = "auth"
-        UI_APP_NAME = "ui"
-        WEATHER_APP_NAME = "weather"
+        AUTH_APP_NAME = "current_weather_app_auth"
+        UI_APP_NAME = "current_weather_app_ui"
+        WEATHER_APP_NAME = "current_weather_app_weather"
 
         AUTH_APP_IMAGE = "${DOCKERHUB_USERNAME}/${AUTH_APP_NAME}"
         UI_APP_IMAGE = "${DOCKERHUB_USERNAME}/${UI_APP_NAME}"
