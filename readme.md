@@ -38,6 +38,7 @@ and add the api
 	 - Content type=APP/JSON
 	 - only send push event 
 7. make a 2nd pipeline for tagging and name it,use this name in the first jenkinsfile to make itself trigger once the 1st pipeline is done.(more details of this part from 8th step)
+`https://github.com/aakkiiff/CurrentWeatherApp_Config`
 	 
 **NOW YOUR FIRST JENKINS PIPELINE IS READY,PUSH YOUR CODE TO THE REPO AND SEE THE JOB RUNNING,BUILDING AND PUSHING DOCKERFILE TO DOCKERHUB**
 
