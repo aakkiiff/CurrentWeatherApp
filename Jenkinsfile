@@ -51,7 +51,16 @@ pipeline {
                     
                     sh'docker push ${WEATHER_APP_IMAGE}:${IMAGE_TAG}'
                     sh'docker push ${WEATHER_APP_IMAGE}:latest'
+
+                    sh'docker logout'
                 }
+            }
+        }
+
+        stage("TRIGGER CONFIG PIPELINE"){
+            steps{
+                sh "curl -v -k --user akif:11050121758f6b0114c7efba0025554ab4 -X POST -H 'cache-control: nocache' -H 'content-type: application/x-www-urlencoded' --data 'IMAGE_TAG=${IMAGE_TAG}' 'http://13.233.190.75:8080/job/currentweatherapp_config/buildWithParameters?token=sad'"
+                // need to secure the token
             }
         }
     }
