@@ -23,11 +23,11 @@ pipeline {
             }
         }
 
-    //     stage("CHECKOUT GIT REPO"){
-    //         steps{
-    //             git "${GIT_REPO}"
-    //         }
-    //     }
+        stage("CHECKOUT GIT REPO"){
+            steps{
+                git "${GIT_REPO}"
+            }
+        }
 
         stage("BUILD DOCKER IMAGES"){
             steps{
