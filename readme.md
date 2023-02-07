@@ -14,7 +14,3 @@ and add the api
 ## docker compose
 
  - docker compose up --build
-
-
-
-
