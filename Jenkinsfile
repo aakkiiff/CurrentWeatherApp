@@ -40,7 +40,8 @@ pipeline {
         stage("PUSH DOCKER IMAGES TO DOCKERHUB"){
             steps{
                 withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'PASSWORD', usernameVariable: 'USER_NAME')]) {
-                    sh'docker login -u ${USER_NAME} -p ${PASSWORD}'
+                    // sh'docker login -u ${USER_NAME} -p ${PASSWORD}' bad practice,it stores password in an unencrypted file
+                    sh'echo ${PASSWORD} | docker login --username ${USER_NAME} --password-stdin'
 
                     sh'docker push ${AUTH_APP_IMAGE}:${IMAGE_TAG}'
                     sh'docker push ${AUTH_APP_IMAGE}:latest'
