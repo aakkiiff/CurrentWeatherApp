@@ -14,7 +14,7 @@ pipeline {
         WEATHER_APP_IMAGE = "${DOCKERHUB_USERNAME}/${WEATHER_APP_NAME}"
     }
 
-    // stages{
+         stages{
     //     stage('CLEANUP WORKSPACE'){
     //         steps{
     //             script{
