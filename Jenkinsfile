@@ -14,20 +14,20 @@ pipeline {
         WEATHER_APP_IMAGE = "${DOCKERHUB_USERNAME}/${WEATHER_APP_NAME}"
     }
 
-    stages{
-        stage('CLEANUP WORKSPACE'){
-            steps{
-                script{
-                    cleanWs()
-                }
-            }
-        }
+    // stages{
+    //     stage('CLEANUP WORKSPACE'){
+    //         steps{
+    //             script{
+    //                 cleanWs()
+    //             }
+    //         }
+    //     }
 
-        stage("CHECKOUT GIT REPO"){
-            steps{
-                git "${GIT_REPO}"
-            }
-        }
+    //     stage("CHECKOUT GIT REPO"){
+    //         steps{
+    //             git "${GIT_REPO}"
+    //         }
+    //     }
 
         stage("BUILD DOCKER IMAGES"){
             steps{
