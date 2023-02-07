@@ -59,7 +59,7 @@ pipeline {
 
         stage("TRIGGER CONFIG PIPELINE"){
             steps{
-                build job: 'currentweatherapp_config', parameters: [string(name: 'IMAGE_TAG', value: '${IMAGE_TAG}')]
+                build job: 'currentweatherapp_config', parameters: [string(name: 'IMAGE_TAG', value: ${IMAGE_TAG})]
             }
         }
     }
