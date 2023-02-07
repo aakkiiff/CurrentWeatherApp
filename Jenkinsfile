@@ -14,14 +14,14 @@ pipeline {
         WEATHER_APP_IMAGE = "${DOCKERHUB_USERNAME}/${WEATHER_APP_NAME}"
     }
 
-         stages{
-    //     stage('CLEANUP WORKSPACE'){
-    //         steps{
-    //             script{
-    //                 cleanWs()
-    //             }
-    //         }
-    //     }
+    stages{
+        stage('CLEANUP WORKSPACE'){
+            steps{
+                script{
+                    cleanWs()
+                }
+            }
+        }
 
     //     stage("CHECKOUT GIT REPO"){
     //         steps{
