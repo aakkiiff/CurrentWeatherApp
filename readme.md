@@ -1,5 +1,3 @@
-
-
 # Current weather app
 
 ![diagram](https://github.com/aakkiiff/CurrentWeatherApp/blob/master/Diagram.jpg?raw=true)
